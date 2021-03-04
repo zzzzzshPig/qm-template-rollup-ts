@@ -1,0 +1,42 @@
+{
+    "name": "qm-plugin-error-watch",
+    "version": "1.0.0",
+    "main": "./dist/index.js",
+    "types": "./dist/main.d.ts",
+    "keywords": [
+        "qm-plugin",
+        "qm-plugin-error",
+        "qm-plugin-error-watch",
+        "error",
+        "watch",
+        "error-watch"
+    ],
+    "module": "dist/index.js",
+    "repository": "https://github.com/zzzzzshPig/qm-plugin-errorWatch.git",
+    "author": "zhoushaohui <1012352205@qq.com>",
+    "license": "MIT",
+    "scripts": {
+        "dev": "rollup -c --watch"
+    },
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^4.16.1",
+        "@typescript-eslint/parser": "^4.16.1",
+        "eslint": "^7.21.0",
+        "eslint-config-standard": "^16.0.2",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-promise": "^4.3.1",
+        "rollup": "^2.40.0",
+        "rollup-plugin-terser": "^7.0.2",
+        "rollup-plugin-typescript2": "^0.30.0",
+        "tslib": "^2.1.0",
+        "typescript": "^4.2.2"
+    },
+    "dependencies": {
+        "@sentry/tracing": "^6.2.1",
+        "@sentry/vue": "^6.2.1"
+    },
+    "files": [
+        "dist"
+    ]
+}
