@@ -1,9 +1,9 @@
 {
-    "name": "qm-rollup-template",
+    "name": "qm-plugin-admin-login",
     "version": "1.0.0",
     "main": "./dist/index.js",
     "types": "./dist/main.d.ts",
-    "keywords": [],
+    "keywords": ["qm-rollup-admin-login"],
     "module": "dist/index.js",
     "author": "zhoushaohui",
     "license": "MIT",
@@ -11,6 +11,7 @@
         "dev": "rollup -c --watch"
     },
     "devDependencies": {
+        "@rollup/plugin-node-resolve": "^11.2.0",
         "@typescript-eslint/eslint-plugin": "^4.16.1",
         "@typescript-eslint/parser": "^4.16.1",
         "eslint": "^7.21.0",
@@ -24,6 +25,8 @@
         "tslib": "^2.1.0",
         "typescript": "^4.2.2"
     },
-    "dependencies": {
-    }
+    "dependencies": {},
+    "files": [
+        "dist"
+    ]
 }
