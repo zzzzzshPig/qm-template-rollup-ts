@@ -47,7 +47,7 @@ class Login {
     }
 
     login () {
-        const url = this.env === 'production' ? 'http://192.168.1.160:8001/login' : 'https://admin.91xiangju.com/frontend-platform/login'
+        const url = this.env === 'production' ? 'https://admin.91xiangju.com/frontend-platform/login' : 'http://192.168.1.160:8001/login'
         const from = `qm_from=${encodeURIComponent(location.href)}`
         const title = `&title=${encodeURIComponent(this.title)}`
         openWin(`${url}?${from}${title}`, this.target)
