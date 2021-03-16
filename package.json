@@ -1,19 +1,11 @@
 {
-    "name": "qm-plugin-error-watch",
+    "name": "qm-rollup-template",
     "version": "1.0.0",
     "main": "./dist/index.js",
     "types": "./dist/main.d.ts",
-    "keywords": [
-        "qm-plugin",
-        "qm-plugin-error",
-        "qm-plugin-error-watch",
-        "error",
-        "watch",
-        "error-watch"
-    ],
+    "keywords": [],
     "module": "dist/index.js",
-    "repository": "https://github.com/zzzzzshPig/qm-plugin-errorWatch.git",
-    "author": "zhoushaohui <1012352205@qq.com>",
+    "author": "zhoushaohui",
     "license": "MIT",
     "scripts": {
         "dev": "rollup -c --watch"
@@ -33,10 +25,5 @@
         "typescript": "^4.2.2"
     },
     "dependencies": {
-        "@sentry/tracing": "^6.2.1",
-        "@sentry/vue": "^6.2.1"
-    },
-    "files": [
-        "dist"
-    ]
+    }
 }

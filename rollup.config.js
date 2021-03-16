@@ -6,7 +6,7 @@ export default {
     output: {
         file: 'dist/index.js',
         format: 'esm',
-        name: 'qm-error-watch',
+        name: 'qm-rollup-template',
         banner: '/* Author by zsh */',
         sourcemap: true
     },
@@ -14,5 +14,5 @@ export default {
         terser(),
         typescript()
     ],
-    external: ['@sentry/vue', '@sentry/tracing']
+    external: []
 }
