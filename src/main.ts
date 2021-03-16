@@ -12,6 +12,22 @@ const ENV = {
     production: 'production'
 }
 
+function openWin (url: string, target: string) {
+    const a = document.createElement('a')
+    const id = '___false_click'
+
+    a.setAttribute('href', url)
+    a.setAttribute('target', target)
+    a.setAttribute('id', id)
+
+    // 防止反复添加
+    if (!document.getElementById(id)) {
+        document.body.appendChild(a)
+    }
+
+    a.click()
+}
+
 class Login {
     private target = ''
     private title = ''
@@ -39,7 +55,7 @@ class Login {
         const url = this.env === ENV.development ? 'http://192.168.1.160:8001/login' : 'https://admin.91xiangju.com/frontend-platform/login'
         const from = `qm_from=${encodeURIComponent(location.href)}`
         const title = `&title=${encodeURIComponent(this.title)}`
-        open(`${url}?${from}${title}`, this.target)
+        openWin(`${url}?${from}${title}`, this.target)
     }
 
     logout () {
