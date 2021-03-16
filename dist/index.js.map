@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sources":["../src/main.ts"],"sourcesContent":["console.log('hello world')\n"],"names":["console","log"],"mappings":"AAAAA,QAAQC,IAAI"}
