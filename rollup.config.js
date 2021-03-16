@@ -8,8 +8,7 @@ export default {
         file: 'dist/index.js',
         format: 'esm',
         name: 'qm-rollup-template',
-        banner: '/* Author by zsh */',
-        sourcemap: true
+        banner: '/* Author by zsh */'
     },
     plugins: [
         terser(),
