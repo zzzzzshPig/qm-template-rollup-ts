@@ -1,6 +1,6 @@
 ### 使用
 ```shell
-git clone https://github.com/zzzzzshPig/qm-rollup-template.git my-project
+git clone https://gitlab.malmam.com/qm/qm-rollup-template.git my-project
 ```
 
 ### 技术
