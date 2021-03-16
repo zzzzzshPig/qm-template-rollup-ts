@@ -3,6 +3,11 @@
     "version": "1.0.0",
     "main": "./dist/index.js",
     "types": "./dist/main.d.ts",
+    "homepage": "https://github.com/zzzzzshPig/qm-plugin-admin-login",
+    "bugs": {
+        "url": "https://github.com/zzzzzshPig/qm-plugin-admin-login/issues",
+        "email" : "zzzzzzshpig@163.com"
+    },
     "keywords": ["qm-rollup-admin-login"],
     "module": "dist/index.js",
     "author": "zhoushaohui",
