@@ -25,7 +25,7 @@ class Login {
 
         // 路径上存在 token 则设置进local 并且清除掉路径上的 token
         if (token) {
-            localStorage.setItem(tokenKey, token)
+            localStorage.setItem(tokenKey, JSON.stringify(token))
             history.pushState({}, '', location.href.split('?')[0])
         } else if (!localStorage.getItem(tokenKey)) {
             // 本地没有存有token 则登录
