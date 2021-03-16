@@ -16,10 +16,17 @@ login.init({
 })
 ```
 
-插件在init之后会检测有没有登录，如果没有登录会自动调用`login`。你也可以手动调用`login`，比如在token过期之后，接口返回10500错误
+插件在init之后会检测有没有登录，如果没有登录会自动调用`login`，在需要的时候，你也可以手动调用
+```js
+if (hackAttack) {
+    login.login()
+}
+```
+
+在token过期之后，接口返回10500错误，或者用户退出登录，可以调用`logout`
 ```js
 if (code === 10500) {
-    login.login()
+    login.logout()
     return
 }
 ```

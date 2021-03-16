@@ -16,11 +16,13 @@ class Login {
     private target = ''
     private title = ''
     private env = ''
+    private tokenKey = ''
 
     init ({ tokenKey = 'token', target = '_self', title = '登录', env = 'development' }: InitOptions = {}) {
         this.env = env
         this.target = target
         this.title = title
+        this.tokenKey = tokenKey
         const token = querystring.parse(location.search.slice(1)).qm_token as string
 
         // 路径上存在 token 则设置进local 并且清除掉路径上的 token
@@ -38,6 +40,11 @@ class Login {
         const from = `qm_from=${encodeURIComponent(location.href)}`
         const title = `&title=${encodeURIComponent(this.title)}`
         open(`${url}?${from}${title}`, this.target)
+    }
+
+    logout () {
+        localStorage.removeItem(this.tokenKey)
+        this.login()
     }
 }
 
