@@ -11,7 +11,8 @@ import login from 'qm-plugin-admin-login'
 login.init({
     tokenKey: 'token',
     target: '_self',
-    title: '分析师后台管理登录'
+    title: '分析师后台管理登录',
+    env: 'development'
 })
 ```
 
@@ -40,3 +41,8 @@ if (code === 10500) {
 * default: 登录
 * type: string
 * 登录页显示的网页title
+
+### env
+* default: development
+* type: string
+* 当前开发环境，用来判断跳转哪里登录
