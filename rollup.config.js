@@ -7,9 +7,7 @@ export default {
     output: {
         file: 'dist/index.js',
         format: 'esm',
-        name: 'qm-rollup-template',
-        banner: '/* Author by zsh */',
-        sourcemap: true
+        name: 'qm-rollup-template'
     },
     plugins: [
         terser(),
