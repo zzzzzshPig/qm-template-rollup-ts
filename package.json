@@ -1,12 +1,17 @@
 {
     "name": "qm-rollup-template",
     "version": "1.0.0",
-    "main": "./dist/index.js",
+    "main": "./dist/index.esm.js",
     "types": "./dist/main.d.ts",
+    "homepage": "https://github.com/zzzzzshPig/qm-rollup-template",
+    "bugs": {
+        "url": "https://github.com/zzzzzshPig/qm-rollup-template/issues",
+        "email": "zzzzzzshpig@163.com"
+    },
     "keywords": [
         "qm-rollup-template"
     ],
-    "module": "dist/index.js",
+    "module": "dist/index.esm.js",
     "author": "zhoushaohui",
     "license": "MIT",
     "scripts": {
@@ -22,6 +27,7 @@
         "eslint-plugin-node": "^11.1.0",
         "eslint-plugin-promise": "^4.3.1",
         "rollup": "^2.40.0",
+        "rollup-plugin-polyfill-node": "^0.6.1",
         "rollup-plugin-terser": "^7.0.2",
         "rollup-plugin-typescript2": "^0.30.0",
         "tslib": "^2.1.0",
