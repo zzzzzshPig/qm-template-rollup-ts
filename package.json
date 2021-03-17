@@ -9,7 +9,7 @@
         "email" : "zzzzzzshpig@163.com"
     },
     "keywords": ["qm-rollup-admin-login"],
-    "module": "dist/index.js",
+    "module": "dist/index.esm.js",
     "author": "zhoushaohui",
     "license": "MIT",
     "scripts": {
