@@ -2,7 +2,7 @@
 
 ## 使用
 ```shell
-yarn add https://gitlab.malmam.com/qm/qm-plugin-admin-login.git
+yarn add https://gitlab.malmam.com/qm/qm-plugin-admin-login.git#1.0.0
 ```
 
 ```js
