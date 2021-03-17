@@ -4,12 +4,7 @@ declare type InitOptions = Partial<{
     title: string;
     env: 'development' | 'production';
 }>;
-declare global {
-    interface Window {
-        qmLogin: Login;
-    }
-}
-declare class Login {
+export declare class Login {
     private target;
     private title;
     private env;

@@ -8,7 +8,8 @@ function baseConfig () {
         input: 'src/main.ts',
         output: {
             name: 'qm-rollup-template',
-            banner: '/* Author by zsh */'
+            banner: '/* Author by zsh */',
+            exports: 'named'
         },
         plugins: [
             terser(),

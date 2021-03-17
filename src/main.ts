@@ -7,10 +7,6 @@ type InitOptions = Partial<{
     env: 'development' | 'production'; // production development
 }>
 
-declare global {
-    interface Window { qmLogin: Login }
-}
-
 function openWin (url: string, target: string) {
     const a = document.createElement('a')
     const id = '___false_click'
@@ -27,7 +23,7 @@ function openWin (url: string, target: string) {
     a.click()
 }
 
-class Login {
+export class Login {
     private target = ''
     private title = ''
     private env = ''
@@ -65,6 +61,8 @@ class Login {
 
 const qmLogin = new Login()
 
-window.qmLogin = qmLogin
+if (window) {
+    window.qmLogin = qmLogin
+}
 
 export default qmLogin
