@@ -9,7 +9,7 @@ yarn add https://gitlab.malmam.com/qm/qm-plugin-admin-login.git#1.0.0
 import login from 'qm-plugin-admin-login'
 
 login.init({
-    tokenKey: 'token',
+    tokenKey: 'qm_token',
     target: '_self',
     title: '分析师后台管理登录',
     env: 'development'
@@ -35,7 +35,7 @@ if (code === 10500) {
 
 ## 参数
 ### tokenKey
-* default: token
+* default: qm_token
 * type: string
 * token在localStorage中的key
 

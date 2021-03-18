@@ -29,7 +29,7 @@ export class Login {
     private env = ''
     private tokenKey = ''
 
-    init ({ tokenKey = 'token', target = '_self', title = '登录', env = 'development' }: InitOptions = {}) {
+    init ({ tokenKey = 'qm_token', target = '_self', title = '登录', env = 'development' }: InitOptions = {}) {
         this.env = env
         this.target = target
         this.title = title
