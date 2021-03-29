@@ -15,7 +15,8 @@
     "author": "zhoushaohui",
     "license": "MIT",
     "scripts": {
-        "dev": "rollup -c --watch"
+        "dev": "rollup -c --watch",
+        "build": "rollup -c"
     },
     "devDependencies": {
         "@rollup/plugin-node-resolve": "^11.2.0",
