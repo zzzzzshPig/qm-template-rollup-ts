@@ -14,8 +14,8 @@ async function init () {
     }
 
     const { version } = await prompt.get(config)
-    console.log(version)
-    shell.exit(`npm version ${version}`)
+    shell.echo(`开始构建${version}版本`)
+    shell.exec(`npm version ${version}`)
 }
 
 init()
