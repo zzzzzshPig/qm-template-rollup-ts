@@ -16,7 +16,7 @@
     "license": "MIT",
     "scripts": {
         "dev": "rollup -c --watch",
-        "build": "node ./prompt.js"
+        "build": "node ./build.js"
     },
     "devDependencies": {
         "@rollup/plugin-node-resolve": "^11.2.0",
