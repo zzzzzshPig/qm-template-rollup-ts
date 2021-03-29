@@ -35,7 +35,7 @@ async function init () {
 
     shell.echo('input git commit')
     const { commit } = await prompt.get(_commit)
-    shell.exec(`git commit -m ${commit}`)
+    shell.exec(`git commit -a -m "${commit}"`)
     shell.exec(`npm version ${version}`)
 }
 
