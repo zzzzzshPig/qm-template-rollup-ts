@@ -54,7 +54,6 @@ export class Login {
     }
 
     logout () {
-        localStorage.removeItem(this.tokenKey)
         this.login()
     }
 }
