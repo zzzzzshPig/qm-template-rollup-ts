@@ -47,7 +47,7 @@ async function init () {
     shell.exec(`git tag -a ${version} -m "${version}"`)
 
     if (push) {
-        shell.exec('git push origin master --tags')
+        shell.exec('git push --tags')
     }
 }
 
