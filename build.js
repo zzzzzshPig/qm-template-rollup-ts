@@ -1,4 +1,4 @@
-const prompt = require('prompt')
+const prompts = require('prompts')
 const shell = require('shelljs')
 const fs = require('fs')
 const pack = require('./package.json')
@@ -8,34 +8,34 @@ nextVersion[nextVersion.length - 1] = Number(nextVersion[nextVersion.length - 1]
 nextVersion = nextVersion.join('.')
 
 async function init () {
-    prompt.start()
-
-    const _version = {
-        properties: {
-            version: {
-                message: `当前版本${pack.version}`,
-                default: nextVersion,
-                required: true
-            }
+    const _version = [
+        {
+            type: 'text',
+            name: 'version',
+            message: `当前版本${pack.version}`,
+            initial: nextVersion
         }
-    }
+    ]
 
-    const { version } = await prompt.get(_version)
+    const { version } = await prompts(_version)
     shell.echo('rollup building......')
     shell.exec('rollup -c')
 
-    const _commit = {
-        properties: {
-            commit: {
-                message: 'git commit log',
-                default: `Update: ${version}`,
-                required: true
-            }
+    const _git = [
+        {
+            type: 'text',
+            name: 'commit',
+            message: 'Input Your git commit log',
+            initial: `Update: ${version}`
+        },
+        {
+            name: 'push',
+            type: 'confirm',
+            message: 'Can you push code?'
         }
-    }
+    ]
 
-    shell.echo('input git commit message')
-    const { commit } = await prompt.get(_commit)
+    const { commit, push } = await prompts(_git)
 
     // 修改npm version
     fs.writeFileSync('./package.json', JSON.stringify({
@@ -45,6 +45,10 @@ async function init () {
 
     shell.exec(`git commit -a -m "${commit}"`)
     shell.exec(`git tag -a ${version} -m "${version}"`)
+
+    if (push) {
+        shell.exec('git push origin master')
+    }
 }
 
 init()
