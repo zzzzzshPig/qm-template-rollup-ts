@@ -7,7 +7,7 @@ function baseConfig () {
     return {
         input: 'src/main.ts',
         output: {
-            name: 'qm-rollup-template',
+            name: 'qmLogin',
             banner: '/* Author by zsh */',
             exports: 'named'
         },

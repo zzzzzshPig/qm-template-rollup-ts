@@ -13,5 +13,5 @@ export declare class Login {
     login(): void;
     logout(): void;
 }
-declare const qmLogin: Login;
-export default qmLogin;
+declare const _default: Login;
+export default _default;

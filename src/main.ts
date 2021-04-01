@@ -58,10 +58,4 @@ export class Login {
     }
 }
 
-const qmLogin = new Login()
-
-if (window) {
-    window.qmLogin = qmLogin
-}
-
-export default qmLogin
+export default new Login()
