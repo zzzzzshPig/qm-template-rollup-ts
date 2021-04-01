@@ -1,6 +1,6 @@
 {
     "name": "qm-rollup-template",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "main": "./dist/index.esm.js",
     "types": "./dist/main.d.ts",
     "homepage": "https://github.com/zzzzzshPig/qm-rollup-template",
