@@ -16,7 +16,7 @@
     "license": "MIT",
     "scripts": {
         "dev": "rollup -c --watch",
-        "build": "node ./build.js"
+        "build": "sh ./publish.sh"
     },
     "devDependencies": {
         "@rollup/plugin-node-resolve": "^11.2.0",
@@ -27,12 +27,10 @@
         "eslint-plugin-import": "^2.22.1",
         "eslint-plugin-node": "^11.1.0",
         "eslint-plugin-promise": "^4.3.1",
-        "prompts": "^2.4.1",
         "rollup": "^2.40.0",
         "rollup-plugin-polyfill-node": "^0.6.1",
         "rollup-plugin-terser": "^7.0.2",
         "rollup-plugin-typescript2": "^0.30.0",
-        "shelljs": "^0.8.4",
         "tslib": "^2.1.0",
         "typescript": "^4.2.2"
     },
