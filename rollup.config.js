@@ -2,6 +2,8 @@ import { terser } from 'rollup-plugin-terser'
 import typescript from 'rollup-plugin-typescript2'
 import { nodeResolve } from '@rollup/plugin-node-resolve'
 import nodePolyfills from 'rollup-plugin-polyfill-node'
+import commonjs from '@rollup/plugin-commonjs'
+import json from '@rollup/plugin-json'
 
 function baseConfig () {
     return {
@@ -37,7 +39,17 @@ esm.plugins.push(
     nodeResolve()
 )
 
+const cjs = baseConfig()
+cjs.output.format = 'cjs'
+cjs.output.file = 'dist/index.cjs.js'
+cjs.plugins.push(
+    nodeResolve(),
+    commonjs(),
+    json()
+)
+
 export default [
     umd,
-    esm
+    esm,
+    cjs
 ]
